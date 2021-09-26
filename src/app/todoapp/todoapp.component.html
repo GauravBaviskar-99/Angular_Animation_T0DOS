@@ -7,10 +7,10 @@
             aria-describedby="basic-addon1" (keyup.enter)="addItemIntoList()">
     </div>
 </div>
-<div class="container " style="width: 50%;margin-top: 3rem;">
+<div  class="container " style="width: 50%;margin-top: 3rem;">
 
-    <ul class="list-group list-group-flush">
-        <li (click)="removeItemFromList(i)" class="list-group-item" *ngFor="let item of todoList;let i=index">{{item}}</li>
+    <ul  class="list-group list-group-flush">
+        <li @shakeLeft  (click)="removeItemFromList(i)" class="list-group-item" *ngFor="let item of todoList;let i=index">{{item}}</li>
         
     </ul>
 </div>
