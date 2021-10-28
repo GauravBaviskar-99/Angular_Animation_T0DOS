@@ -1,0 +1,21 @@
+.zippy {
+  border: 1px solid dodgerblue;
+  border-radius: 4px;
+  margin-block: 5rem;
+  margin-inline: 25%;
+}
+.zippy-heading {
+  padding: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.zippy-body {
+  padding: 20px;
+}
+.glyphicon {
+  float: right;
+}
+.expanded {
+  background-color: #f0f0f0;
+}

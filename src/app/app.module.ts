@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodoappComponent } from './todoapp/todoapp.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ZippyComponent } from './zippy/zippy.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TodoappComponent
+    TodoappComponent,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,

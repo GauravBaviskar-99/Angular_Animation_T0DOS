@@ -1,0 +1,26 @@
+<div class="zippy">
+    <div class="zippy-heading" (click)="toggleZippy()" [class.expanded]="openZippyBox">
+        Learn Anguar Animation ...!
+        <span class="glyphicon glyphicon-chevron-up"
+            [ngClass]="openZippyBox ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down' ">
+
+        </span>
+    </div>
+    <div @zippyAnimation *ngIf="openZippyBox" class="zippy-body">
+        <p>Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Consequuntur similique
+            eum quam. Magnam quae eius perferendis ullam,
+            nihil voluptates? Iure earum eveniet tempore
+            dolores ad voluptas molestiae a quis, iste
+            aliquid debitis optio quia? Maiores magni ab
+            molestiae pariatur in voluptatum eos eligendi iure,
+            ad aspernatur veritatis reiciendis cupiditate hic
+            amet atque optio error delectus modi, perspiciatis
+            consectetur, autem officiis ea. Dolores, iure adipisci a
+            consequatur labore cum reiciendis nam dicta porro error
+            eos aliquid ducimus perspiciatis animi, provident repe
+            llendus tempore, in nemo. Hic cum minus eius alias mag
+            ni? Architecto ratione commodi veniam praesentium quid
+            em libero molestias consectetur modi soluta!</p>
+    </div>
+</div>

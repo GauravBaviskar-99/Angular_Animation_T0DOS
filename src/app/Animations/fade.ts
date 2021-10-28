@@ -1,4 +1,4 @@
-import { animate, keyframes, state, style, transition, trigger } from "@angular/animations";
+import { animate, animation, keyframes, state, style, transition, trigger, useAnimation } from "@angular/animations";
 
 export let fade = trigger('fade', [
     state('void', style({ backgroundColor: 'aliceblue', opacity: 0 })),
@@ -8,7 +8,7 @@ export let fade = trigger('fade', [
 ])
 
 
-export let shakeLeft = trigger('shakeLeft', [
+export let animateTodo = trigger('animateTodo', [
     transition('void => *', [
         style({
             backgroundColor: 'aliceblue',
@@ -17,28 +17,61 @@ export let shakeLeft = trigger('shakeLeft', [
         animate('0.7s ease-in')
     ]),
     transition(':leave', [
+        style({
+            backgroundColor: 'red'
+        }),
+        animate(500),
         animate('1s ease-out', keyframes([
             style({
                 offset: 0,
                 color: 'red',
+                zIndex: 5,
                 transform: "scale(1)",
                 opacity: 1,
             }),
             style({
                 offset: 0.2,
+                zIndex: 5,
                 transform: "translateY(0px) scale(0.7)",
                 opacity: 0.7,
             }),
             style({
                 offset: 1,
                 color: 'red',
+                zIndex: 5,
                 transform: 'translateY(700px) scale(0.7)',
                 opacity: 0.7,
             }),
         ]))
     ])
 ])
+export let bounceOutLeftAnimation = animation(
+    animate('0.5s ease-out', keyframes([
+        style({
+            offset: 0.2,
+            opacity: 1,
+            transform: 'translateX(20px)'
+        }),
+        style({
+            offset: 1,
+            opacity: 0,
+            transform: 'translateX(-100%)'
+        }),
 
+    ]))
+)
+
+export let slide = trigger('slide', [
+    transition(':enter', [
+        style({
+            transform: 'translateX(-20px)'
+        }),
+        animate(500)
+    ]),
+    transition(':leave', [
+        useAnimation(bounceOutLeftAnimation)
+    ])
+])
 
 
 
