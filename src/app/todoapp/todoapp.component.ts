@@ -56,8 +56,18 @@ export class TodoappComponent implements OnInit {
   }
 
   addItemIntoList() {
-    this.todoList.push(this.taskName);
-    this.taskName = "";
+    try {
+      if (this.taskName) {
+        this.todoList.unshift(this.taskName);
+        this.taskName = "";
+      }
+      else {
+        return;
+      }
+    } catch (error) {
+      console.log("Got Error while adding Item into List", error.message);
+    }
+
   }
   removeItemFromList(i) {
     this.todoList.splice(i, 1)
