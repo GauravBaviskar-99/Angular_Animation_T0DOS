@@ -58,7 +58,7 @@ export class TodoappComponent implements OnInit {
   addItemIntoList() {
     try {
       if (this.taskName) {
-        this.todoList.unshift(this.taskName);
+        this.todoList = [this.taskName, ...this.todoList];
         this.taskName = "";
       }
       else {

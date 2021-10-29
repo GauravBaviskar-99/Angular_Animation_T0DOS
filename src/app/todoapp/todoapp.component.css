@@ -2,3 +2,18 @@
   text-decoration: line-through;
   cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
+  div #mobile {
+    width: 100% !important;
+    margin-top: 4rem !important;
+    padding: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  div #mobile-list {
+    width: 100% !important;
+    margin-top: 0rem !important;
+    padding: 10px !important;
+  }
+}

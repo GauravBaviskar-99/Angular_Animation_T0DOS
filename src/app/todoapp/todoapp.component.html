@@ -1,13 +1,13 @@
 
 <div @todosAnimations>
-    <div class="container d-flex justify-content-center" style="width: 50%;margin-top: 10rem;">
+    <div  id="mobile" class="mobile container d-flex justify-content-center" style="width: 50%;margin-top: 10rem;">
         <div class="input-group mb-3" id="todoEnterBox">
             <span class="input-group-text" id="basic-addon1">Enter Task To add in list</span>
             <input  type="text" class="form-control" [(ngModel)]="taskName" placeholder="Type Task Name" aria-label="Username"
                 aria-describedby="basic-addon1" (keyup.enter)="addItemIntoList()">
         </div>
     </div>
-    <div  class="container " style="width: 50%;margin-top: 3rem;">
+    <div id="mobile-list"  class=" mobile-list container  " style="width: 50%;margin-top: 3rem;">
     
         <ul  class="list-group list-group-flush">
             <li @animateTodo  (click)="removeItemFromList(i)" class="list-group-item" *ngFor="let item of todoList;let i=index">{{item}}</li>
